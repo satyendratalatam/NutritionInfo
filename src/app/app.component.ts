@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public isMenuOpen: boolean = false;
   title = 'NutritionInfoApp';
+
+  public onSidenavClick(): void {
+    this.isMenuOpen = false;
+  }
 }

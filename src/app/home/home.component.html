@@ -1,0 +1,16 @@
+<mat-card style="height: 500px; padding-left: 220px;">
+  <mat-card-content>
+    <ngx-charts-bar-vertical [view]="[800,500]" [results]="saleData" [xAxisLabel]="'Formulae'"
+      [legendTitle]="'Formulae Evaluated'" [yAxisLabel]="'Rank'" [legend]="true" [showXAxisLabel]="true"
+      [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
+    </ngx-charts-bar-vertical>
+  </mat-card-content>
+</mat-card>
+
+<mat-card style="height: 300px;">
+  <mat-card-content>
+    <ngx-charts-pie-chart [results]="saleData" [legend]="true" [legendTitle]="'Formulae Evaluated'" [view]="[1000,300]"
+      [labels]="true">
+    </ngx-charts-pie-chart>
+  </mat-card-content>
+</mat-card>

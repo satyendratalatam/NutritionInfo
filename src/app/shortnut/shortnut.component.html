@@ -1,0 +1,51 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Formulae 1" value="Formulae 1">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Serving Size</mat-label>
+    <input matInput placeholder="Formulae 1" value="25">
+  </mat-form-field>
+
+</form>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="Version">
+    <th mat-header-cell *matHeaderCellDef> Version. </th>
+    <td mat-cell *matCellDef="let element"> {{element.Version}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="V1">
+    <th mat-header-cell *matHeaderCellDef> V1 </th>
+    <td mat-cell *matCellDef="let element"> {{element.V1}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="V2">
+    <th mat-header-cell *matHeaderCellDef> V2 </th>
+    <td mat-cell *matCellDef="let element"> {{element.V2}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="UOM">
+    <th mat-header-cell *matHeaderCellDef> UOM </th>
+    <td mat-cell *matCellDef="let element"> {{element.UOM}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+
