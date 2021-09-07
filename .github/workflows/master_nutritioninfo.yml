@@ -50,6 +50,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'nutritioninfo'
-        slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_20b2b95725d0431da182697761e6a1b0 }}
-        package: .
+        package: ./dist/NutritionInfoApp
